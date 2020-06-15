@@ -1,4 +1,5 @@
 $lt-gray: #ddd;
+$text-color-white: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
@@ -12,6 +13,19 @@ $carousel-item-height: 300px;
 	padding: $pad-up-dn $pad-left-right;
 }
 
+.modal{
+    .modal-header{
+        background-color: $background-dark;
+        color: $text-color-white;
+        button{
+            color: $background-pale;
+        }
+    }
+    .modal-body{
+
+        background-color: $background-pale;
+    }
+}
 
 .row-header{
     @include zero-margin(0px,0px);

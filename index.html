@@ -34,7 +34,7 @@
                         <li class="nav-item"> <a  href="contactus.html" class="nav-link"> <span class="fa fa-address-card  fa-lg"></span> Contact</a></li>
                     </ul>
                     <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal">
+                        <a id="openLoginModal">
                             <span class="fa fa-sign-in"></span>
                             Login
                         </a>
@@ -91,7 +91,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a data-toggle="modal" data-target="#ReserveModal">
+                    <a id="openReserveModal">
                         <button type="button" class="btn btn-warning btn-block"> Reserve Table</button>
                     </a>
                 </div>
@@ -100,7 +100,7 @@
     </header>
 
     
-    <div id="ReserveModal" class="modal fade" role="dialog">
+    <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             
             <div class="modal-content">
@@ -405,7 +405,7 @@
         
         $('#carousel-pause-section').show();
         $('#carousel-play-section').hide();
-        
+
         $('#carousel-pause').click(function(){
             $('#carousel-pause-section').hide();
             $('#carousel-play-section').show();
@@ -415,6 +415,15 @@
             $('#carousel-pause-section').show();
             $('#carousel-play-section').hide();
             $('#mycarousel').carousel('cycle');
+        });
+
+        $('#openReserveModal').click(function(){
+            $('#reserveModal').modal('show');
+            console.log("hello There");
+        });
+        $('#openLoginModal').click(function(){
+            $('#loginModal').modal('show');
+            console.log("general Kenobi");
         });
     });
 </script>
