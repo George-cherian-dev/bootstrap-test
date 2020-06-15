@@ -223,6 +223,16 @@
                             
                         </span>
                     </a>
+                    <div class="btn-group carousel-buttons" id="carousel-pause-section">
+                            <button class="btn btn-danger btn-sm" id="carousel-pause">
+                                <span class="fa fa-pause"></span>
+                            </button>
+                    </div>
+                    <div class="btn-group carousel-buttons" id="carousel-play-section">
+                            <button class="btn btn-danger btn-sm" id="carousel-play">
+                                <span class="fa fa-play"></span>
+                            </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -391,6 +401,21 @@
 <script>
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
+        $('#mycarousel').carousel({interval:2000});
+        
+        $('#carousel-pause-section').show();
+        $('#carousel-play-section').hide();
+        
+        $('#carousel-pause').click(function(){
+            $('#carousel-pause-section').hide();
+            $('#carousel-play-section').show();
+            $('#mycarousel').carousel('pause');
+        });
+        $('#carousel-play').click(function(){
+            $('#carousel-pause-section').show();
+            $('#carousel-play-section').hide();
+            $('#mycarousel').carousel('cycle');
+        });
     });
 </script>
 
