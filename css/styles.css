@@ -38,3 +38,8 @@ body{
 .navbar-dark{
     background-color: #512da8;
 }
+
+.custom-img-logo-nav{
+    width:41px;
+    height:30px;
+}
